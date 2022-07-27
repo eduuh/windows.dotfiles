@@ -1,3 +1,7 @@
+#set up the bare repository on windows
+#checkout the repository
+dotfiles config --local status.showUntrackedFiles no
+
 scoop install neovim
 scoop bucket add main
 scoop install ripgrep
