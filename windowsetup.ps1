@@ -18,6 +18,10 @@ scoop install Cascadia-Code
 # Lsp configurations setup
 npm install -g typescript typescript-language-server
 npm i -g vscode-langservers-extracted
+npm install --save-dev prettier prettier-plugin-solidity
+
 
 rm -r C:\Users\edwinmuraya\AppData\Local\
 cp -r .config\nvim  C:\Users\edwinmuraya\AppData\Local\
+
+# refer here https://github.com/ChristianChiarulli/nvim/blob/master/lua/user/lsp/settings/tsserver.lua

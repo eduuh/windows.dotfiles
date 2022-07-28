@@ -9,6 +9,22 @@ require('lsp')
 require('defx')
 require("harpoon-config")
 
+local null_ls = require("null-ls")
+local formatting = require("null-ls").builtins.formatting 
+local diagnostics = require("null-ls").builtins.diagnostics
+
+null_ls.setup {
+  debug = false,
+  sources = {
+    formatting.prettier.with {
+      extra_filetypes = { "tsx", "ts" },
+      extra_args = {"--jsx-single-quote", "--tab-width 4" },
+    },
+    formatting.stylua,
+    diagnostics.eslint,
+  }
+}
+
 require('autosave').setup(
   {
       events = {"TextChanged", "BufLeave"},

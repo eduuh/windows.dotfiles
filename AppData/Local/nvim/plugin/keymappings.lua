@@ -75,4 +75,5 @@ keymap("n","<leader>ld",":lua require('telescope.builtin').lsp_definitions()<CR>
 keymap("n","<leader>lD",":lua require('telescope.builtin').lsp_type_definitions()<CR>",opts)
 keymap("n","<leader>co",":Telescope find_files cwd=~/.config/nvim <CR>",opts)
 keymap("n","<leader>lc",":Telescope find_files cwd=~/.local/bin <CR>",opts)
+keymap("n","<leader>fd",":lua vim.lsp.buf.formatting_sync() <CR>",opts)
 
