@@ -1,11 +1,11 @@
 vim.cmd([[
    set termguicolors 
 ]])
+
 require('impatient')
 
 require('plugins')
 require('lsp')
-require('telescope-config')
 require('defx')
 require("harpoon-config")
 
@@ -66,3 +66,4 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require('cmp-config')
+require('telescope-config')

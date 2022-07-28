@@ -15,5 +15,9 @@ pip install pynvim
 scoop install fd
 scoop install Cascadia-Code
 
+# Lsp configurations setup
+npm install -g typescript typescript-language-server
+npm i -g vscode-langservers-extracted
+
 rm -r C:\Users\edwinmuraya\AppData\Local\
 cp -r .config\nvim  C:\Users\edwinmuraya\AppData\Local\

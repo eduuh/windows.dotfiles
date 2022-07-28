@@ -29,13 +29,8 @@ keymap("x","i","l",opts)
   
 keymap("n","l","i",opts)
 keymap("n","L","I",opts)
-
--- Folds 
-
-keymap("n","j","z",opts)
-keymap("n","jn","zj",opts)
-keymap("n","je","zk",opts)
-
+keymap("n","h","n",opts)
+keymap("n","H","N",opts)
 
 -- Window handling
 

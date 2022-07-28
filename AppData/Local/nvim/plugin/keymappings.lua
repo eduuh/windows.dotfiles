@@ -11,7 +11,6 @@ local keymap = vim.api.nvim_set_keymap
 -- term_mode = "t"
 -- command_mode = "c"
 
-
 vim.g.mapleader = ' '
 vim.g.termguicolors = true
 keymap("n","<Leader>h",  ":set hlsearch!<CR>",  opts )
@@ -47,8 +46,8 @@ keymap("n", "<leader>cd", ":cd %:p:h<CR>", opts)
 
 -- Command --
 -- Menu navigation
-keymap("c", "<C-j>",  'pumvisible() ? "\\<C-n>" : "\\<C-j>"', cmd_opts )
-keymap("c", "<C-k>",  'pumvisible() ? "\\<C-p>" : "\\<C-k>"', cmd_opts )
+keymap("c", "<C-n>",  'pumvisible() ? "\\<C-n>" : "\\<C-j>"', cmd_opts )
+keymap("c", "<C-p>",  'pumvisible() ? "\\<C-p>" : "\\<C-k>"', cmd_opts )
 keymap("c", "w!!",  'execute "silent! write !sudo tee % >/dev/null" <bar> edit!', cmd_opts)
 
 vim.cmd([[
@@ -60,4 +59,20 @@ vim.cmd([[
 -- TODO force omnisharp to reload server when switching branches
 -- noremap <leader>rl :OmniSharpReloadSolution<cr>
 -- nnoremap <leader>cf :OmniSharpCodeFormat<cr>
+--Telescope
+
+keymap("n","<leader>gw",":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>",opts)
+keymap("n","<leader>gm",":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>",opts)
+keymap("n","<leader>fb",":lua require('telescope.builtin').buffers()<CR>",opts)
+keymap("n","<leader>ff",":lua require('telescope.builtin').git_files()<CR>",opts)
+keymap("n","<leader>fg",":lua require('telescope.builtin').live_grep()<CR>",opts)
+keymap("n","<C-p>",":lua require('telescope.builtin').find_files()<CR>",opts)
+keymap("n","<leader>lr",":lua require('telescope.builtin').lsp_references()<CR>",opts)
+keymap("n","<leader>ls",":lua require('telescope.builtin').lsp_document_symbols()<CR>",opts)
+keymap("n","<leader>la",":lua require('telescope.builtin').lsp_code_actions()<CR>",opts)
+keymap("n","<leader>la",":lua require('telescope.builtin').lsp_code_actions()<CR>",opts)
+keymap("n","<leader>ld",":lua require('telescope.builtin').lsp_definitions()<CR>",opts)
+keymap("n","<leader>lD",":lua require('telescope.builtin').lsp_type_definitions()<CR>",opts)
+keymap("n","<leader>co",":Telescope find_files cwd=~/.config/nvim <CR>",opts)
+keymap("n","<leader>lc",":Telescope find_files cwd=~/.local/bin <CR>",opts)
 

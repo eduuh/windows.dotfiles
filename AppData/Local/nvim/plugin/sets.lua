@@ -30,18 +30,27 @@ local options = {
    colorcolumn = "80",
 }
 
-vim.cmd "let g:sharpenup_map_prefix = '<leader>'"
-
-vim.cmd([[
-   set number
-   set lazyredraw
-   ]])
-
 vim.opt.shortmess:append "c"
-
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.cmd([[
+  function! MyFoldFunction()
+      let line = getline(v:foldstart)
+      “ cleanup unwanted things in first line
+      let sub = substitute(line, '/\*\|\*/\|^\s+', '', 'g')
+      “ calculate lines in folded text
+      let lines = v:foldend - v:foldstart + 1
+      return v:folddashes.sub.'...'.lines.' Lines...'.getline(v:foldend)
+  endfunction
+]])
+
+vim.cmd([[
+   set number
+   set lazyredraw
+   set foldenable
+   set foldtext=MyFoldFunction()
+]])
 
