@@ -36,7 +36,7 @@ use 'tpope/vim-dispatch'
 use 'tpope/vim-repeat'
 use 'tpope/vim-sensible'
 use 'Shougo/vimproc.vim'
-
+use 'lewis6991/gitsigns.nvim'
 use 'dense-analysis/ale'
  use {
       'nvim-treesitter/nvim-treesitter',

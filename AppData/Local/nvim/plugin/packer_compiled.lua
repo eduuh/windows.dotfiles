@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\git-worktree.nvim",
     url = "https://github.com/ThePrimeagen/git-worktree.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",

@@ -83,3 +83,4 @@ require'nvim-treesitter.configs'.setup {
 
 require('cmp-config')
 require('telescope-config')
+require('gitsigns')

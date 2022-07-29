@@ -63,6 +63,7 @@ vim.cmd([[
 
 keymap("n","<leader>gw",":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>",opts)
 keymap("n","<leader>gm",":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>",opts)
+keymap("n","<leader>wd",":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>",opts)
 keymap("n","<leader>fb",":lua require('telescope.builtin').buffers()<CR>",opts)
 keymap("n","<leader>ff",":lua require('telescope.builtin').git_files()<CR>",opts)
 keymap("n","<leader>fg",":lua require('telescope.builtin').live_grep()<CR>",opts)
@@ -76,4 +77,17 @@ keymap("n","<leader>lD",":lua require('telescope.builtin').lsp_type_definitions(
 keymap("n","<leader>co",":Telescope find_files cwd=~/.config/nvim <CR>",opts)
 keymap("n","<leader>lc",":Telescope find_files cwd=~/.local/bin <CR>",opts)
 keymap("n","<leader>fd",":lua vim.lsp.buf.formatting_sync() <CR>",opts)
+
+-- Git Signs
+keymap("n","<leader>hs",":Gitsigns stage_hunk<CR>",opts)
+keymap("v","<leader>hs",":Gitsigns stage_hunk<CR>",opts)
+
+keymap("n","<leader>hr",":Gitsigns reset_hunk<CR>",opts)
+keymap("v","<leader>hr",":Gitsigns reset_hunk<CR>",opts)
+keymap("n","<leader>hS",":Gitsigns stage_buffer<CR>",opts)
+keymap("n","<leader>hu",":Gitsigns undo_stage_hunk<CR>",opts)
+keymap("n","<leader>hR",":Gitsigns reset_buffer<CR>",opts)
+keymap("n","<leader>hp",":Gitsigns preview_hunk<CR>",opts)
+keymap("n","<leader>tb",":Gitsigns toggle_current_line_blame<CR>",opts)
+keymap("n","<leader>td",":Gitsigns diffthis<CR>",opts)
 
