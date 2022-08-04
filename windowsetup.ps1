@@ -1,5 +1,6 @@
 #set up the bare repository on windows
 #checkout the repository
+git clone --bare https://github.com/eduuh/windows.dotfiles "$HOME/.dotfiles"
 dotfiles config --local status.showUntrackedFiles no
 
 scoop install neovim
@@ -10,10 +11,12 @@ scoop bucket add nerd-fonts
 scoop install FiraCode-NF
 
 scoop install gcc
+scoop bucket add versions
 scoop install python310
 pip install pynvim
 scoop install fd
 scoop install Cascadia-Code
+scoop install nodejs
 
 # Lsp configurations setup
 npm install -g typescript typescript-language-server
