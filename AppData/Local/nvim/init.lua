@@ -5,7 +5,6 @@ vim.cmd([[
 require('impatient')
 
 require('plugins')
-require('lsp')
 require('defx')
 require("harpoon-config")
 
@@ -24,12 +23,6 @@ null_ls.setup {
     diagnostics.eslint,
   }
 }
-
-require('autosave').setup(
-  {
-      events = {"TextChanged", "BufLeave"},
-  }
-)
 
 require 'colorizer'.setup {
   'css';
@@ -54,9 +47,9 @@ require('nvim_comment').setup()
 --set theme
 vim.o.background = "dark"
 
-vim.cmd([[
-   colorscheme gruvbox
-]])
+-- vim.cmd([[
+--    colorscheme gruvbox
+-- ]])
 
 --remove whitespaces ff
 vim.cmd([[
@@ -81,6 +74,34 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
-require('cmp-config')
+require('completion')
+require('lsp')
 require('telescope-config')
 require('gitsigns')
+
+vim.o.background = 'dark'
+
+local c = require('vscode.colors')
+
+require('vscode').setup({
+    -- Enable transparent background
+    transparent = true,
+
+    -- Enable italic comment
+    italic_comments = true,
+
+    -- Disable nvim-tree background color
+    disable_nvimtree_bg = true,
+
+    -- Override colors (see ./lua/vscode/colors.lua)
+    color_overrides = {
+        vscLineNumber = '#FFFFFF',
+    },
+
+    -- Override highlight groups (see ./lua/vscode/theme.lua)
+    group_overrides = {
+        -- this supports the same val table as vim.api.nvim_set_hl
+        -- use colors from this colorscheme by requiring vscode.colors!
+        Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
+    }
+})

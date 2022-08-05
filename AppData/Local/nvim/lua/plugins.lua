@@ -19,9 +19,7 @@ return require('packer').startup(function()
 -- Packer can manage itself
 use 'lewis6991/impatient.nvim'
 use 'wbthomason/packer.nvim'
-use 'neovim/nvim-lspconfig'
 use 'terrortylor/nvim-comment'
-use 'Pocco81/AutoSave.nvim'
 use 'nvim-telescope/telescope.nvim'
 use 'ThePrimeagen/git-worktree.nvim'
 use 'EdenEast/nightfox.nvim'
@@ -38,6 +36,7 @@ use 'tpope/vim-sensible'
 use 'Shougo/vimproc.vim'
 use 'lewis6991/gitsigns.nvim'
 use 'dense-analysis/ale'
+use 'Mofiqul/vscode.nvim'
  use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
@@ -57,14 +56,13 @@ use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
 use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}
 
 -- completion , snippets and Sources
+use 'neovim/nvim-lspconfig'
+use 'hrsh7th/cmp-nvim-lsp'
 use 'hrsh7th/cmp-buffer'
 use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
-use 'hrsh7th/vim-vsnip'
-use 'hrsh7th/vim-vsnip-integ'
-use 'hrsh7th/cmp-nvim-lsp'
-use 'hrsh7th/cmp-nvim-lsp-document-symbol'
-use 'hrsh7th/cmp-omni'
 use 'hrsh7th/nvim-cmp'
 
+use 'hrsh7th/cmp-vsnip'
+use  'hrsh7th/vim-vsnip'
 end)

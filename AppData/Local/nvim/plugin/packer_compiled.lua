@@ -69,11 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["AutoSave.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\AutoSave.nvim",
-    url = "https://github.com/Pocco81/AutoSave.nvim"
-  },
   ale = {
     loaded = true,
     path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ale",
@@ -94,20 +89,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["cmp-nvim-lsp-document-symbol"] = {
-    loaded = true,
-    path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp-document-symbol",
-    url = "https://github.com/hrsh7th/cmp-nvim-lsp-document-symbol"
-  },
-  ["cmp-omni"] = {
-    loaded = true,
-    path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-omni",
-    url = "https://github.com/hrsh7th/cmp-omni"
-  },
   ["cmp-path"] = {
     loaded = true,
     path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["defx-git"] = {
     loaded = true,
@@ -259,15 +249,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
   },
-  ["vim-vsnip-integ"] = {
-    loaded = true,
-    path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vsnip-integ",
-    url = "https://github.com/hrsh7th/vim-vsnip-integ"
-  },
   ["vimproc.vim"] = {
     loaded = true,
     path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vimproc.vim",
     url = "https://github.com/Shougo/vimproc.vim"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\edwinmuraya\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
