@@ -5,7 +5,7 @@ vim.cmd([[
 require('impatient')
 
 require('plugins')
-require('defx')
+require('nvim-fileexplorer')
 require("harpoon-config")
 
 local null_ls = require("null-ls")

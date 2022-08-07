@@ -123,3 +123,7 @@ nnoremap <leader>ab :lua require("harpoon.ui").nav_file(2)<CR>
 nnoremap <leader>ac :lua require("harpoon.ui").nav_file(3)<CR>
 nnoremap <leader>ad :lua require("harpoon.ui").nav_file(4)<CR>
 ]])
+
+-- Lsp
+keymap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
+keymap("n", "<c-l>", "<cmd>lua vim.lsp.codelens.run()<cr>", opts)

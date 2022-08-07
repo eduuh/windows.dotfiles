@@ -65,4 +65,15 @@ use 'hrsh7th/nvim-cmp'
 
 use 'hrsh7th/cmp-vsnip'
 use  'hrsh7th/vim-vsnip'
+-- File explorer
+use {
+  'kyazdani42/nvim-tree.lua',
+  requires = {
+    'kyazdani42/nvim-web-devicons', -- optional, for file icons
+  },
+  tag = 'nightly' -- optional, updated every week. (see issue #1193)
+}
+
+use "numToStr/Comment.nvim"
+use "folke/todo-comments.nvim"
 end)
