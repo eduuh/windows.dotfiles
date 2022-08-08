@@ -19,6 +19,8 @@ scoop install Cascadia-Code
 scoop install nodejs
 
 # Lsp configurations setup
+npm install --global prettier-eslint-cli
+npm install --global  @typescript-eslint/eslint-plugin
 npm install -g typescript typescript-language-server
 npm i -g vscode-langservers-extracted
 npm install --save-dev prettier prettier-plugin-solidity
