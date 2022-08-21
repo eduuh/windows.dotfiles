@@ -2,9 +2,10 @@ vim.cmd([[
    set termguicolors 
 ]])
 
+require('plugins')
+
 require('impatient')
 
-require('plugins')
 require('nvim-fileexplorer')
 require("harpoon-config")
 

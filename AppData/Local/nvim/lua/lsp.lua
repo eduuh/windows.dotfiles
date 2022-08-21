@@ -3,12 +3,12 @@ local nvim_lsp = require('lspconfig')
 local lsputils = require('vim.lsp.util')
 local api = vim.api
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+-- Setup lspconfig.
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local on_attach = function(client, bufnr)
   if client.name == "tsserver" then
-     client.resolved_capabilities.document_formatting = false
+     client.server_capabilities.document_formatting = false
   end
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
