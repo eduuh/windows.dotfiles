@@ -5,6 +5,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
 packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
+-- C:/Users/edwinmuraya/AppData/Local/nvim-data/site/pack/packer/start/vimproc.vim/lib/vimproc_win64.dll
+
 vim.cmd [[packadd packer.nvim]]
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -33,14 +35,15 @@ use 'tpope/vim-surround'
 use 'tpope/vim-dispatch'
 use 'tpope/vim-repeat'
 use 'tpope/vim-sensible'
-use 'Shougo/vimproc.vim'
 use 'lewis6991/gitsigns.nvim'
 use 'dense-analysis/ale'
 use 'Mofiqul/vscode.nvim'
- use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
-  }
+
+use {
+  'nvim-treesitter/nvim-treesitter',
+  run = ':TSUpdate'
+}
+
 use {
 'nvim-lualine/lualine.nvim',
 requires = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -76,4 +79,25 @@ use {
 
 use "numToStr/Comment.nvim"
 use "folke/todo-comments.nvim"
+use "weirongxu/plantuml-previewer.vim"
+use "aklt/plantuml-syntax"
+use {"Shougo/vimproc.vim", run = 'make'}
+use "tyru/open-browser.vim"
+
+use {'nvim-orgmode/orgmode', config = function()
+        require('orgmode').setup{}
+end
+}
+
+use {'akinsho/org-bullets.nvim', config = function()
+  require('org-bullets').setup()
+end}
+
+use {
+    'lukas-reineke/headlines.nvim',
+    config = function()
+        require('headlines').setup()
+    end,
+}
+
 end)

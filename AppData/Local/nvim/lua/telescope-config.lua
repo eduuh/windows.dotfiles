@@ -11,7 +11,7 @@ pickers = {
 },
 defaults = {
      prompt_prefix = ">> ",
-  file_ignore_patterns = {"obj", "vptests", "bin", "node_modules", "plugged", "autoload", "images"},
+  file_ignore_patterns = {"obj", "bin", "node_modules", "plugged", "autoload", "images"},
   mappings= {
      i = {
       ["<c-q>"] = require("telescope.actions").send_to_qflist + require("telescope.actions").open_qflist,
