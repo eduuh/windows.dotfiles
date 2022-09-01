@@ -37,7 +37,7 @@ require 'colorizer'.setup {
 
 require('lualine').setup{
    options = {
-          theme = 'gruvbox'
+          theme = 'material'
    }
 }
 
@@ -48,10 +48,6 @@ require('nvim_comment').setup()
 
 --set theme
 vim.o.background = "dark"
-
--- vim.cmd([[
---    colorscheme gruvbox
--- ]])
 
 --remove whitespaces ff
 vim.cmd([[
@@ -74,32 +70,6 @@ require('gitsigns')
 
 vim.o.background = 'dark'
 
-local c = require('vscode.colors')
-
-require('vscode').setup({
-    -- Enable transparent background
-    transparent = true,
-
-    -- Enable italic comment
-    italic_comments = true,
-
-    -- Disable nvim-tree background color
-    disable_nvimtree_bg = true,
-
-    -- Override colors (see ./lua/vscode/colors.lua)
-    color_overrides = {
-        vscLineNumber = '#FFFFFF',
-    },
-
-    -- Override highlight groups (see ./lua/vscode/theme.lua)
-    group_overrides = {
-        -- this supports the same val table as vim.api.nvim_set_hl
-        -- use colors from this colorscheme by requiring vscode.colors!
-        Cursor = { fg=c.vscDarkBlue, bg=c.vscLightGreen, bold=true },
-    }
-})
-
-
 vim.cmd([[
     let g:ale_linters = {}
     let g:ale_linters.typescript = ['eslint', 'tsserver']
@@ -110,7 +80,7 @@ vim.cmd([[
 -- org mode
 
 -- Load custom tree-sitter grammar for org filetype
-require('orgmode').setup_ts_grammar()
+
 
 -- Tree-sitter configuration
 require'nvim-treesitter.configs'.setup {
@@ -127,6 +97,17 @@ require('orgmode').setup({
   org_default_notes_file ="~\\'OneDrive - Microsoft'\\Notes\\Org\\refile.org",
 })
 
+require('orgmode').setup_ts_grammar()
+require('org-bullets').setup()
+require('headlines').setup()
+
 vim.opt.conceallevel = 2
 vim.opt.concealcursor = 'nc'
 vim.opt.shellslash = true
+ 
+-- remove blank line indicators ~~
+vim.wo.fillchars='eob: '
+--Lua:
+
+vim.g.material_style = "deep ocean"
+vim.cmd 'colorscheme material'
