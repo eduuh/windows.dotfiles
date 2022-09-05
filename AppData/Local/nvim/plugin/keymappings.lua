@@ -29,9 +29,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n","<BS>","<C-^>",opts)
 
 -- Toggle File Manaeger
-keymap("n","<c-t>",":Defx<cr>",opts)
-keymap("i","<c-t>",":Defx<cr>",opts)
-keymap("v","<c-t>",":Defx<cr>",opts)
+keymap("n","<c-t>",":NvimTreeToggle<cr>", opts)
+keymap("i","<c-t>",":NvimTreeToggle<cr>", opts)
+keymap("v","<c-t>",":NvimTreeToggle<cr>", opts)
 
 -- Visual --
 -- Stay in indent mode

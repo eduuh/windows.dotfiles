@@ -1,5 +1,4 @@
 vim.cmd([[
-
    set termguicolors 
 ]])
 
@@ -93,8 +92,8 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require('orgmode').setup({
-  org_agenda_files = {"~\\'OneDrive - Microsoft'\\Notes\\Org\\*"},
-  org_default_notes_file ="~\\'OneDrive - Microsoft'\\Notes\\Org\\refile.org",
+  org_agenda_files = {"~\\OneDrive - Microsoft\\Notes\\Org\\*"},
+  org_default_notes_file ="~\\OneDrive - Microsoft\\Notes\\Org\\refile.org",
 })
 
 require('orgmode').setup_ts_grammar()
@@ -111,3 +110,4 @@ vim.wo.fillchars='eob: '
 
 vim.g.material_style = "deep ocean"
 vim.cmd 'colorscheme material'
+
