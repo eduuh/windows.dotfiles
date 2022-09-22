@@ -16,11 +16,17 @@ nvim_tree.setup {
   hijack_directories = {
     enable = false,
   },
+  actions = {
+    change_dir = {
+          enable = true,
+          global = false,
+        }
+  },
   -- update_to_buf_dir = {
   --   enable = false,
   -- },
    disable_netrw = true,
-  hijack_netrw = true,
+   hijack_netrw = true,
   -- open_on_setup = false,
   ignore_ft_on_setup = {
     "startify",
@@ -36,7 +42,7 @@ nvim_tree.setup {
   -- auto_close = true,
   -- open_on_tab = false,
   -- hijack_cursor = false,
-  update_cwd = true,
+  update_cwd = false,
   -- update_to_buf_dir = {
   --   enable = true,
   --   auto_open = true,

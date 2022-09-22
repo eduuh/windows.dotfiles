@@ -38,6 +38,7 @@ use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
 use 'hrsh7th/cmp-vsnip'
+use 'hrsh7th/vim-vsnip'
 use 'nvim-orgmode/orgmode'
 use 'akinsho/org-bullets.nvim'
 use 'lukas-reineke/headlines.nvim'
@@ -47,6 +48,8 @@ use "folke/todo-comments.nvim"
 use "weirongxu/plantuml-previewer.vim"
 use "aklt/plantuml-syntax"
 use "tyru/open-browser.vim"
+use "OmniSharp/omnisharp-vim"
+use "nickspoons/vim-sharpenup"
 
 use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true }}
 use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}

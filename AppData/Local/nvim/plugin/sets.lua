@@ -4,7 +4,6 @@ local options = {
    backup = false,                                  -- creates a backup file
    clipboard = "unnamedplus",                       -- allow neovim to access the system clipboard
    cmdheight = 1,                                   -- more space in nvim command line for displaying messages
-   completeopt = "menuone,noinsert,menu",           -- mostly for cmp
    conceallevel = 0,                                -- so that `` is  visible in markdown files
    fileencoding = "utf-8",                          -- the encoding of written file
    hidden = true,                                   -- required to keep multiple buffers and open multiple buffers
@@ -49,7 +48,6 @@ vim.cmd([[
 
 vim.cmd([[
    set number
-   set lazyredraw
    set foldenable
    set foldtext=MyFoldFunction()
 ]])

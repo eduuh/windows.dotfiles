@@ -30,11 +30,11 @@ cmp.setup({
     },
     sources = {
       { name = 'nvim_lsp' },
-      { name = 'omni' },
       { name = 'vsnip' }, -- For vsnip users.
       { name = 'buffer' },
       { name = 'orgmode' },
       { name = 'path' },
+      { name = 'omni' },
     },
     completion = {
        completeopt = 'menu,menuone,noinsert'

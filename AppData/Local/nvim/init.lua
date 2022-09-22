@@ -9,21 +9,8 @@ require('impatient')
 require('nvim-fileexplorer')
 require("harpoon-config")
 
-local null_ls = require("null-ls")
 local formatting = require("null-ls").builtins.formatting 
 local diagnostics = require("null-ls").builtins.diagnostics
-
-null_ls.setup {
-  debug = false,
-  sources = {
-    formatting.prettier.with {
-      extra_filetypes = { "tsx", "ts" },
-      extra_args = {"--jsx-single-quote", "--tab-width 4" },
-    },
-    formatting.stylua,
-    diagnostics.eslint,
-  }
-}
 
 require 'colorizer'.setup {
   'css';
@@ -97,17 +84,13 @@ require('orgmode').setup({
 })
 
 require('orgmode').setup_ts_grammar()
-require('org-bullets').setup()
-require('headlines').setup()
+--require('org-bullets').setup()
+--require('headlines').setup()
 
-vim.opt.conceallevel = 2
-vim.opt.concealcursor = 'nc'
-vim.opt.shellslash = true
- 
 -- remove blank line indicators ~~
 vim.wo.fillchars='eob: '
 --Lua:
 
-vim.g.material_style = "deep ocean"
+vim.g.material_style = "darker"
 vim.cmd 'colorscheme material'
 
