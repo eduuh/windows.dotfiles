@@ -8,32 +8,20 @@ cmp.setup({
       end,
     },
     mapping = {
-  ['<C-k>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-  ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-  ['<Down>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-  ['<Up>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-  ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-  ['<C-f>'] = cmp.mapping.scroll_docs(4),
-  ['<C-i>'] = cmp.mapping.complete(), 
-  ['<CR>'] = cmp.mapping.confirm({
-    behavior = cmp.ConfirmBehavior.Replace,
-    select = true,
-  }),
-      ['<C-e>'] = cmp.mapping({
-        i = cmp.mapping.abort(),
-        c = cmp.mapping.close(),
-      }),
-      -- Accept currently selected item. If none selected, `select` first item.
-      -- Set `select` to `false` to only confirm explicitly selected items.
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+        ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+        ['<C-i>'] = cmp.mapping.complete(), 
+        ['<CR>'] = cmp.mapping.confirm({
+          select = true,
+        })
     },
     sources = {
       { name = 'nvim_lsp' },
+      { name = 'omni' },
       { name = 'vsnip' }, -- For vsnip users.
       { name = 'buffer' },
       { name = 'orgmode' },
       { name = 'path' },
-      { name = 'omni' },
     },
     completion = {
        completeopt = 'menu,menuone,noinsert'
