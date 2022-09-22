@@ -50,6 +50,7 @@ use "aklt/plantuml-syntax"
 use "tyru/open-browser.vim"
 use "OmniSharp/omnisharp-vim"
 use "nickspoons/vim-sharpenup"
+use "github/copilot.vim"
 
 use { 'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true }}
 use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim'}

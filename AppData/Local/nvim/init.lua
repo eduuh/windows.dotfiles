@@ -94,3 +94,6 @@ vim.wo.fillchars='eob: '
 vim.g.material_style = "darker"
 vim.cmd 'colorscheme material'
 
+-- use copilot on only some filetypes
+vim.g.copilot_filetype = { xml = false, markdown = false}
+
