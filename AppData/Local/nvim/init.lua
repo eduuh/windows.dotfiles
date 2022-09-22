@@ -79,7 +79,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require('orgmode').setup({
-  org_agenda_files = {"~\\OneDrive - Microsoft\\Notes\\Org\\*"},
+  org_agenda_files = {"~\\OneDrive - Microsoft\\Notes\\*"},
   org_default_notes_file ="~\\OneDrive - Microsoft\\Notes\\Org\\refile.org",
 })
 
@@ -96,4 +96,3 @@ vim.cmd 'colorscheme material'
 
 -- use copilot on only some filetypes
 vim.g.copilot_filetype = { xml = false, markdown = false}
-
