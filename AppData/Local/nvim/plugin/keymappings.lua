@@ -33,7 +33,7 @@ keymap("n", "<leader>bp", ":bprevious<CR>", opts)
 keymap("n","<BS>","<C-^>",opts)
 
 -- Toggle File Manaeger
-keymap("n","<c-t>",":NvimTreeFindFileToggle<cr>", opts)
+keymap("n","<c-b>",":NvimTreeFindFileToggle<cr>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -70,25 +70,6 @@ keymap("n","<leader>ub",":Gitsigns reset_buffer<CR>",opts)
 keymap("n","<leader>ph",":Gitsigns preview_hunk<CR>",opts)
 keymap("n","<leader>tb",":Gitsigns toggle_current_line_blame<CR>",opts)
 keymap("n","<leader>td",":Gitsigns diffthis<CR>",opts)
-
--- lsp
-keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-keymap('n', '<leader>d', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-keymap('n', '<leader>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
-keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
-keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-keymap('n', '<leader>fo', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-keymap('n', '<leader>ld', '<cmd>Telescope lsp_definitions<CR>', { noremap = true })
 
 -- harpoon
 vim.cmd([[

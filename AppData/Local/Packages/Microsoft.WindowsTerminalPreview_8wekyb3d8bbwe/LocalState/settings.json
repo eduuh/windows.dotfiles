@@ -36,12 +36,13 @@
     {
         "defaults": 
         {
-            "colorScheme": "Campbell",
+            "colorScheme": "One Half Dark",
             "font": 
             {
-                "face": "FiraCode NF Retina",
-                "size": 11
-            }
+                "face": "JetBrainsMono Nerd Font",
+                "size": 11.0
+            },
+            "startingDirectory": "C:\\Users\\edwinmuraya\\projects"
         },
         "list": 
         [
@@ -49,13 +50,15 @@
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell"
+                "name": "PowerShell Edwin Fav",
+                "startingDirectory": "C:\\Users\\edwinmuraya\\projects"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "Command Prompt"
+                "name": "Command Prompt",
+                "startingDirectory": "C:\\Users\\edwinmuraya\\Desktop"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -70,40 +73,22 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "guid": "{09a3c973-fc17-53e4-ad47-d236a427d3ee}",
+                "guid": "{539d4e6c-99ef-57b8-be36-dfff879db56f}",
                 "hidden": false,
                 "name": "Developer Command Prompt for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{2608c238-a000-5348-b1a3-f5a64486fd29}",
+                "guid": "{ea7524be-0537-52be-a027-177391b5bcb2}",
                 "hidden": false,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
-                "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
+                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
                 "hidden": true,
-                "name": "Ubuntu-22.04",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{93c86e4b-4a7a-5104-94a6-ef625ebd49f1}",
-                "hidden": true,
-                "name": "Developer Command Prompt for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{f7031f6a-fb71-5341-8cf8-83a9f64886f6}",
-                "hidden": true,
-                "name": "Developer PowerShell for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{f9ceaf27-504c-58d7-927c-d1d6a7ac7d3c}",
-                "hidden": false,
-                "name": "Ubuntu 22.04.1 LTS",
-                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
+                "name": "Visual Studio Debug Console",
+                "source": "VSDebugConsole"
             }
         ]
     },
@@ -340,5 +325,6 @@
             "yellow": "#808000"
         }
     ],
-    "startOnUserLogin": true
+    "startOnUserLogin": true,
+    "themes": []
 }

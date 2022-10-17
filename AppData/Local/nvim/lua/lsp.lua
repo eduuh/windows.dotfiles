@@ -11,21 +11,34 @@ local on_attach = function(client, bufnr)
      client.server_capabilities.document_formatting = false
   end
 
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
   local opts = { noremap=true, silent=true }
+  local keymap = vim.api.nvim_set_keymap
+  -- lsp
+  keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  keymap('n', 'gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
+  keymap('n', '<leader>dl', '<cmd>Telescope diagnostics<CR>', opts)
+  keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
+  keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+  keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+  keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+  keymap('n', '<leader>fo', '<cmd>lua vim.lsp.buf.formatting({ tabSize = 4, trimTrailingWhitespace = true, trimFinalNewLines = true })<CR>', opts)
+  keymap('n', '<leader>ld', '<cmd>Telescope lsp_definitions<CR>', { noremap = true })
+  keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
+  keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
+
 end
 
--- yamlls - for kubernetes and docker-compose I could override the schemas
---'omnisharp'
---install lua server : https://github.com/sumneko/lua-language-server/wiki/Build-and-Run
--- lua stuff
-
-local servers = { 'tsserver','html' }
+local servers = { 'tsserver','html'}
 for _, lsp in ipairs(servers) do
   if lsp == 'omnisharp' then
     local pid = vim.fn.getpid()
-    local omnisharp_bin = "/home/edd/.vscode-insiders/extensions/ms-dotnettools.csharp-1.23.17/.omnisharp/1.37.17/run"
+    local omnisharp_bin = "~\\scoop\\apps\\omnisharp\\1.39.1\\Omnisharp.exe"
     nvim_lsp[lsp].setup {
       capabilities = capabilities,
        cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) },
