@@ -19,9 +19,7 @@ require("neorg").setup({
 				workspaces = {
 					dev = "~/Neorg/Notes/dev",
 					jwl = "~/Neorg/Notes/jwl",
-					yt = "~/Neorg/youtube",
-					thesis = "~/Neorg/Notes/thesis",
-					gtd = "~/Neorg/GTD",
+					work = "~/Neorg/Notes/work"
 				},
 				autodetect = true,
 				autochdir = true,

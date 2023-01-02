@@ -23,13 +23,13 @@ return require("packer").startup(function()
 	use("ggandor/lightspeed.nvim") --> motion plugin with incremental input processing, allowing for unparalleled speed with near-zero cognitive effort
 	use("rcarriga/nvim-notify")
 	use("windwp/nvim-autopairs")
-	-- use("sunjon/shade.nvim") --> dim inactive windows
+	use("sunjon/shade.nvim") --> dim inactive windows
 	-- use("junegunn/goyo.vim")
 	use("fladson/vim-kitty") --> kitty syntax highlighting
-	-- use("jubnzv/mdeval.nvim") --> evaluates code blocks inside markdown, vimwiki, orgmode.nvim and norg docs
+    use("jubnzv/mdeval.nvim") --> evaluates code blocks inside markdown, vimwiki, orgmode.nvim and norg docs
 	use("startup-nvim/startup.nvim")
 	use("lervag/vimtex")
-	-- use("vigoux/LanguageTool.nvim")
+	use("vigoux/LanguageTool.nvim")
 	use("mfussenegger/nvim-dap")
 	--> colorschemes
 	use("EdenEast/nightfox.nvim") --> nightfox colorsceme for neovim
@@ -44,7 +44,7 @@ return require("packer").startup(function()
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	use("nvim-neorg/neorg")
-    use 'lewis6991/gitsigns.nvim'
+    use('lewis6991/gitsigns.nvim')
 
 	--> lsp
 	use("neovim/nvim-lspconfig") --> Collection of configurations for built-in LSP client
@@ -56,4 +56,16 @@ return require("packer").startup(function()
 	use("hrsh7th/cmp-nvim-lsp") --> LSP source for nvim-cmp
 	use("saadparwaiz1/cmp_luasnip") --> Snippets source for nvim-cmp
 	use("L3MON4D3/LuaSnip") --> Snippets plugin
+
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+    use({
+	"Pocco81/auto-save.nvim",
+	config = function()
+		 require("auto-save").setup {
+			-- your config goes here
+			-- or just leave it empty :)
+		 }
+	end,
+    })
 end)

@@ -49,3 +49,4 @@ vim.g.vimtex_view_method = "zathura"
 --     autocmd Filetype tex LanguageToolSetUp
 --     autocmd Filetype norg LanguageToolSetUp
 -- ]])
+
